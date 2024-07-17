@@ -1,6 +1,7 @@
+/* Estilos base */
 .main-footer {
   width: 100%;
-  background: var(--color-primary, #2c3e50);
+  background: #1a2238;
   color: #fff;
   position: fixed;
   left: 0;
@@ -15,35 +16,120 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 1.2rem;
-  padding: 0.7rem 1.5rem;
+  gap: 0.5rem;
+  padding: 0.3rem 0.7rem;
+  justify-content: flex-start;
 }
 
 .footer-logo {
-  height: 36px;
+  height: 13px;
   width: auto;
   display: block;
 }
 
 .footer-text {
-  font-size: 1rem;
+  font-size: 0.7rem;
+  font-family: var(--font-title);
   font-weight: 500;
   letter-spacing: 0.01em;
-  color: #fff;
+  color: var(--color-white);
   opacity: 0.92;
 }
 
-@media (max-width: 700px) {
+/* Pantallas muy grandes */
+@media (min-width: 1440px) {
   .footer-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    padding: 0.7rem 0.7rem;
+    max-width: 1600px;
+    padding: 1.2rem 4vw;
+    gap: 2rem;
+  }
+  .footer-logo {
+    height: 32px;
+  }
+  .footer-text {
+    font-size: 1.15rem;
+  }
+}
+
+/* Pantallas grandes estándar */
+@media (max-width: 1439px) {
+  .footer-content {
+    max-width: 1200px;
+    padding: 1rem 2vw;
+    gap: 1.5rem;
   }
   .footer-logo {
     height: 28px;
   }
   .footer-text {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
+  }
+}
+
+/* Laptops estándar */
+@media (max-width: 1279px) {
+  .footer-content {
+    max-width: 1000px;
+    padding: 0.8rem 1vw;
+    gap: 1.2rem;
+  }
+  .footer-logo {
+    height: 24px;
+  }
+  .footer-text {
+    font-size: 1rem;
+  }
+}
+
+/* Tablets horizontal */
+@media (max-width: 1023px) {
+  .footer-content {
+    max-width: 800px;
+    padding: 0.7rem 0.7rem;
+    gap: 1rem;
+  }
+  .footer-logo {
+    height: 22px;
+  }
+  .footer-text {
+    font-size: 0.98rem;
+  }
+}
+
+/* Tablets vertical */
+@media (max-width: 767px) {
+  .footer-content {
+    max-width: 98vw;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+    padding: 0.2rem 0.3rem;
+  }
+  .footer-logo {
+    height: 10px;
+  }
+  .footer-text {
+    font-size: 0.65rem;
+  }
+}
+
+/* Dispositivos móviles */
+@media (max-width: 640px) {
+  .main-footer {
+    position: fixed;
+    padding: 0;
+  }
+  .footer-content {
+    max-width: 100vw;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+    padding: 0.1rem 0.1rem;
+  }
+  .footer-logo {
+    height: 8px;
+  }
+  .footer-text {
+    font-size: 0.6rem;
   }
 } 

@@ -53,10 +53,13 @@ export default function AddProductForm() {
         />
         {error && <p className="error">{error}</p>}
         {success && <p className="success">¡Producto creado correctamente!</p>}
-        <button type="submit" disabled={loading || success}>
-          {loading ? "Guardando..." : "Guardar Producto"}
-        </button>
-        <button type="button" onClick={() => navigate("/admin/products")} disabled={loading || success}>Cancelar</button>
+        <div className="form-buttons">
+          <button type="submit" disabled={loading || success}>
+            {loading ? "Guardando..." : "Guardar Producto"}
+          </button>
+          <button type="button" onClick={() => navigate("/admin/products")}
+            disabled={loading || success}>Cancelar</button>
+        </div>
       </form>
     </div>
   );

@@ -23,3 +23,17 @@ export const getAllProducts = async () => {
   const response = await axios.get("/api/products");
   return response.data;
 };
+
+// Obtener productos paginados (con seed opcional)
+export const getProductsPaginated = async (page = 0, size = 10, seed = null) => {
+  let url = `/api/products?page=${page}&size=${size}`;
+  if (seed) url += `&seed=${seed}`;
+  const response = await axios.get(url);
+  return response.data;
+};
+
+// Obtener detalle de producto por id
+export const getProductById = async (id) => {
+  const response = await axios.get(`/api/products/${id}`);
+  return response.data;
+};

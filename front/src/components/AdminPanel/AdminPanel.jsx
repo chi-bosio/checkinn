@@ -7,18 +7,25 @@ import ProductList from "../ProductList/ProductList";
 export default function AdminPanel() {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
   useEffect(() => {
-    getAllProducts().then(setProducts).catch(() => setProducts([]));
+    setLoading(true);
+    setError(null);
+    getAllProducts()
+      .then((data) => setProducts(data.content || []))
+      .catch(() => setError("Error al cargar productos"))
+      .finally(() => setLoading(false));
   }, []);
 
   return (
     <div className="admin-panel">
-      <h2>Panel de Administración</h2>
       <button onClick={() => navigate("/admin/products/new")} className="btn-add">
         Agregar producto
       </button>
-      <div style={{ width: "100%", marginTop: "2rem" }}>
-        <ProductList products={products} />
+      <div style={{ width: "100%", marginTop: "1rem" }}>
+        <ProductList products={products} loading={loading} error={error} />
       </div>
     </div>
   );

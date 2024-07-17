@@ -1,21 +1,24 @@
 :root {
   /* Colores principales */
-  --color-primary: #2c3e50;
-  --color-secondary: #1abc9c;
-  --color-background: #f7f9fa;
+  --color-primary: #234567;
+  --color-primary-dark: #1a2e3b;
+  --color-secondary: #00b894;
+  --color-background: #f4f6fb;
   --color-white: #ffffff;
+  --color-white-tint: #f9fafc;
 
   /* Textos */
-  --text-dark: #333333;
-  --text-light: #777777;
+  --text-dark: #222831;
+  --text-light: #5a5a5a;
 
   /* Acentos y alertas */
-  --color-accent: #f39c12;
-  --color-accent-light: #f4c173;
-  --color-error: #e74c3c;
+  --color-accent: #ff9800;
+  --color-accent-light: #ffd180;
+  --color-error: #e53935;
 
   /* Tipografía */
-  --font-main: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-main: 'Inter', 'Segoe UI', Arial, sans-serif;
+  --font-title: 'Montserrat', 'Inter', Arial, sans-serif;
 
   /* Espaciado */
   --spacing-xs: 4px;
