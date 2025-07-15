@@ -3,6 +3,8 @@ import Main from "./components/Main/Main";
 import AdminPanel from "./components/AdminPanel/AdminPanel";
 import AddProductForm from "./components/AddProductForm/AddProductForm";
 import ProductCatalog from "./components/ProductCatalog/ProductCatalog";
+import ProductDetail from "./components/ProductDetail/ProductDetail";
+import Footer from "./components/Footer/Footer";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 // Simulación de función para verificar si el usuario es admin
@@ -17,6 +19,8 @@ function App() {
         <Route path="/" element={<Main />} />
         {/* Página pública: Catálogo */}
         <Route path="/products" element={<ProductCatalog />} />
+        {/* Página pública: Detalle de producto */}
+        <Route path="/products/:id" element={<ProductDetail />} />
         {/* Rutas protegidas para admins */}
         {/*
           Lógica para proteger rutas admin:
@@ -33,6 +37,7 @@ function App() {
           <AddProductForm />
         } />
       </Routes>
+      <Footer />
     </>
   );
 }
