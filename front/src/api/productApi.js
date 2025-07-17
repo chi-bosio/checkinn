@@ -37,3 +37,14 @@ export const getProductById = async (id) => {
   const response = await axios.get(`/api/products/${id}`);
   return response.data;
 };
+
+// Obtener productos para administración
+export const getAdminProducts = async () => {
+  const response = await axios.get('/api/admin/products');
+  return response.data;
+};
+
+// Eliminar producto por id (admin)
+export const deleteAdminProduct = async (id) => {
+  return axios.delete(`/api/admin/products/${id}`);
+};
