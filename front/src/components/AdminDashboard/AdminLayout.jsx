@@ -2,7 +2,12 @@ import { useEffect, useState } from "react";
 import { Outlet, useNavigate, useLocation } from "react-router-dom";
 
 const MENU = [
-  { label: "Gestión de productos", path: "/admin/products" },
+  { label: "Lista de productos", path: "/admin/products", icon: (
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{marginRight:8, verticalAlign:'middle'}}><rect x="2" y="5" width="16" height="10" rx="2" fill="#ff9800"/><rect x="4" y="7" width="12" height="6" rx="1" fill="#fff"/><rect x="7" y="9" width="2" height="2" rx="0.5" fill="#ff9800"/><rect x="11" y="9" width="2" height="2" rx="0.5" fill="#ff9800"/></svg>
+  ) },
+  { label: "Crear producto", path: "/admin/products/new", icon: (
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{marginRight:8, verticalAlign:'middle'}}><rect x="4" y="9" width="12" height="2" rx="1" fill="#43be6a"/><rect x="9" y="4" width="2" height="12" rx="1" fill="#43be6a"/></svg>
+  ) },
   // Puedes agregar más ítems aquí
 ];
 
@@ -50,11 +55,11 @@ export default function AdminLayout() {
         <h2 style={{ fontFamily: 'Montserrat, Inter, Arial, sans-serif', fontWeight: 800, fontSize: 24, margin: 0, marginBottom: 32 }}>Administración</h2>
         <nav style={{ display: "flex", flexDirection: "column", gap: "1.2rem" }}>
           {MENU.map((item) => (
-            <a key={item.path} href={item.path} style={{ color: location.pathname === item.path ? '#ff9800' : "#fff", textDecoration: "none", fontSize: 18, fontWeight: 600, borderRadius: 8, padding: "0.5rem 1rem", transition: "background 0.2s, color 0.2s", background: location.pathname === item.path ? 'rgba(255,152,0,0.08)' : 'none' }}
+            <a key={item.path} href={item.path} style={{ color: location.pathname === item.path ? '#ff9800' : "#fff", textDecoration: "none", fontSize: 18, fontWeight: 600, borderRadius: 8, padding: "0.5rem 1rem", transition: "background 0.2s, color 0.2s", background: location.pathname === item.path ? 'rgba(255,152,0,0.08)' : 'none', display:'flex', alignItems:'center' }}
               onMouseOver={e => e.currentTarget.style.background = "#22304a"}
               onMouseOut={e => e.currentTarget.style.background = location.pathname === item.path ? 'rgba(255,152,0,0.08)' : 'none'}
             >
-              {item.label}
+              {item.icon}{item.label}
             </a>
           ))}
         </nav>
