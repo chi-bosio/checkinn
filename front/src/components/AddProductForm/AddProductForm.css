@@ -1,4 +1,3 @@
-/* Estilos base */
 .add-product-form-container {
   min-height: 100vh;
   display: flex;
@@ -153,7 +152,6 @@
   border: 1px solid #b6f2c7;
 }
 
-/* Pantallas muy grandes */
 @media (min-width: 1440px) {
   .add-product-form {
     max-width: 520px;
@@ -169,7 +167,6 @@
   }
 }
 
-/* Pantallas grandes estándar */
 @media (max-width: 1439px) {
   .add-product-form {
     max-width: 440px;
@@ -185,7 +182,6 @@
   }
 }
 
-/* Laptops estándar */
 @media (max-width: 1279px) {
   .add-product-form {
     max-width: 380px;
@@ -201,7 +197,6 @@
   }
 }
 
-/* Tablets horizontal */
 @media (max-width: 1023px) {
   .add-product-form {
     max-width: 340px;
@@ -217,7 +212,6 @@
   }
 }
 
-/* Tablets vertical */
 @media (max-width: 767px) {
   .add-product-form-container {
     padding-top: 50px;
@@ -238,7 +232,6 @@
   }
 }
 
-/* Dispositivos móviles */
 @media (max-width: 640px) {
   .add-product-form-container {
     padding-top: 30px;

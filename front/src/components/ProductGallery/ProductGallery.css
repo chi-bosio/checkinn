@@ -154,7 +154,7 @@
   transform: translateY(-50%);
 }
 .gallery-modal-arrow.left {
-  left: calc(50% - 415px - 38px); /* 400px es la mitad del ancho de la imagen, 38px es separación */
+  left: calc(50% - 415px - 38px);
 }
 .gallery-modal-arrow.right {
   right: calc(50% - 415px - 38px);

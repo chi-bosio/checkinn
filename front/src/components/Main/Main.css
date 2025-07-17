@@ -87,42 +87,36 @@
   border: 1px solid #e0e0e0;
 }
 
-/* Dispositivos móviles (320px - 480px) */
 @media (max-width: 480px) {
   .main-content {
     padding: var(--spacing-sm);
   }
 }
 
-/* Tablets (481px - 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
   .main-content {
     padding: var(--spacing-md);
   }
 }
 
-/* Laptops (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .main-content {
     padding: var(--spacing-lg);
   }
 }
 
-/* Desktops (1025px - 1200px) */
 @media (min-width: 1025px) and (max-width: 1200px) {
   .main-content {
     padding: 3rem;
   }
 }
 
-/* Pantallas extra-grandes (1201px+) */
 @media (min-width: 1201px) {
   .main-content {
     padding: 4rem;
   }
 }
 
-/* Pantallas muy grandes */
 @media (min-width: 1440px) {
   .main-content {
     padding: 5rem 8vw;
@@ -139,7 +133,6 @@
   }
 }
 
-/* Pantallas grandes estándar */
 @media (max-width: 1439px) {
   .main-content {
     padding: 3.5rem 5vw;
@@ -156,7 +149,6 @@
   }
 }
 
-/* Laptops estándar */
 @media (max-width: 1279px) {
   .main-content {
     padding: 2.5rem 3vw;
@@ -171,7 +163,6 @@
   }
 }
 
-/* Tablets horizontal */
 @media (max-width: 1023px) {
   .main-content {
     padding: 1.5rem 2vw;
@@ -186,7 +177,6 @@
   }
 }
 
-/* Tablets vertical */
 @media (max-width: 767px) {
   .main-content {
     padding: 1rem 1vw;
@@ -201,7 +191,6 @@
   }
 }
 
-/* Dispositivos móviles */
 @media (max-width: 640px) {
   .main-content {
     padding: 0.5rem 0.5vw;

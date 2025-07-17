@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 
 const MENU = [
   { label: "Gestión de productos", path: "/admin/products" },
-  // Puedes agregar más ítems aquí
 ];
 
 export default function AdminDashboard() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const [access, setAccess] = useState(null); // null: loading, true: ok, false: denied
+  const [access, setAccess] = useState(null);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -57,7 +56,6 @@ export default function AdminDashboard() {
         <div style={{ fontSize: 22, color: "#234567", fontWeight: 700, marginBottom: 24 }}>
           Selecciona una función del menú para comenzar.
         </div>
-        {/* Aquí puedes renderizar el contenido de la función seleccionada en el futuro */}
       </main>
     </div>
   );

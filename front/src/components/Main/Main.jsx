@@ -30,7 +30,7 @@ function Main() {
       const data = await getProductsPaginated(pageNum, 10, currentSeed);
       setProducts(data.content || []);
       setTotalPages(data.totalPages || 1);
-      if (data.seed && !seed) setSeed(data.seed); // Solo guardar el seed la primera vez
+      if (data.seed && !seed) setSeed(data.seed);
     } catch (err) {
       setError("Error al cargar productos");
     } finally {
@@ -40,10 +40,8 @@ function Main() {
 
   useEffect(() => {
     fetchProducts(page, seed);
-    // eslint-disable-next-line
   }, [page, seed]);
 
-  // Resetear seed si el usuario refresca la página
   useEffect(() => {
     setSeed(null);
   }, []);

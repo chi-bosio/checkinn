@@ -65,7 +65,6 @@ public class FileStorageService {
     }
 
     private String generateSignature(long timestamp) {
-        // Solo firmamos el parámetro timestamp
         String data = "timestamp=" + timestamp + apiSecret;
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-1");

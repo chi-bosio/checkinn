@@ -46,7 +46,6 @@ public class ProductController {
             @RequestParam(required = false) Long seed
     ) {
         if (size > 10) size = 10;
-        // Si no hay seed, generamos uno aleatorio
         long usedSeed = (seed != null) ? seed : new java.util.Random().nextLong();
         Page<Product> productPage = productService.getAllProductsRandom(PageRequest.of(page, size), usedSeed);
         Map<String, Object> response = Map.of(

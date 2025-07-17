@@ -104,6 +104,33 @@ La paleta de colores y estilos globales se define en `/front/src/styles/variable
 
 ---
 
+## Configuración de variables de entorno (.env)
+
+Para mayor seguridad, las credenciales sensibles (base de datos y Cloudinary) se configuran mediante variables de entorno en un archivo `.env` ubicado en la carpeta `back/`.
+
+1. Copia el archivo de ejemplo:
+   ```bash
+   cp .env.example .env
+   ```
+2. Completa los valores reales en `.env` según tu entorno.
+3. El archivo `.env` **no debe subirse al repositorio** (ya está en `.gitignore`).
+4. El backend tomará automáticamente estas variables si usas un entorno compatible (por ejemplo, con [dotenv](https://github.com/cdimascio/dotenv-java) o configurando tu entorno de ejecución).
+
+**Ejemplo de .env:**
+```env
+POSTGRES_URL=jdbc:postgresql://localhost:5432/checkinn
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=tu_password
+POSTGRES_DRIVER=org.postgresql.Driver
+CLOUDINARY_CLOUD_NAME=tu_cloud_name
+CLOUDINARY_API_KEY=tu_api_key
+CLOUDINARY_API_SECRET=tu_api_secret
+```
+
+**No olvides completar y mantener seguro tu archivo `.env`.**
+
+---
+
 ## Endpoints principales y ejemplos
 
 ### Productos públicos

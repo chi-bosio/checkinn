@@ -19,12 +19,6 @@ export default function ProductDetail() {
 
   const images = product.imageUrls || [];
 
-  const handleViewMore = () => {
-    // Aquí se podría abrir un modal o slider con todas las imágenes
-    // Por ahora solo loguea
-    console.log("Ver más imágenes", images);
-  };
-
   return (
     <div className="product-detail-container">
       <header className="product-detail-header">
@@ -34,7 +28,7 @@ export default function ProductDetail() {
         </button>
       </header>
       <div className="product-detail-body product-detail-body-column">
-      <ProductGallery images={images} description={product.description} onViewMore={handleViewMore} />
+      <ProductGallery images={images} description={product.description} />
       </div>
     </div>
   );
